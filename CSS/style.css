@@ -13,8 +13,14 @@
     justify-content: 
     space-between;
     height: 80px; 
-    background-color:rgb(233, 141, 205); 
+    background-color:#8a9aa8; 
     padding: 5px 60px;
+}
+nav h2{
+    color:rgb(3, 3, 58);
+}
+body {
+    background-color:#c3cbd3;
 }
 i
 { 
@@ -22,7 +28,7 @@ i
 }
 #shop-product
     { 
-        color:rgb(145, 145, 241); 
+        color:rgb(11, 11, 80); 
         text-align:center; 
         font-family: 'Poppins', sans-serif;
     }
@@ -44,7 +50,7 @@ section
   }
   
   /* Clearfix (clear floats) */
-   .row::after {
+    .row::after {
     content: "";
     clear: both;
     display: table;
@@ -52,3 +58,71 @@ section
    img {
 border: 2px solid #555;
   }    
+  .quantity-input {
+    width: 40px;
+  }
+  
+  .remove-button {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .total-price {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .total-price h2 {
+    font-size: 18px;
+  }
+  .checkout-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .add-to-cart {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #c3cbd3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .cart-items {
+    margin-top: 20px;
+    background-color: #1abb42;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item {
+    margin-bottom: 10px;
+  }
+  
+  .cart-item h3 {
+    font-size: 16px;
+  }
+  
+  .cart-item h4 {
+    font-size: 14px;
+    color: #8a9aa8;
+  }
+
+
+  
