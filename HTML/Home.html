@@ -1,47 +1,30 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- <style>
-        * {
-          box-sizing: border-box;
-        }
-        
-        .column {
-          float: left;
-          width: 25%;
-          padding: 5px;
-        }
-        
-        /* Clearfix (clear floats) */
-        .row::after {
-          content: "";
-          clear: both;
-          display: table;
-        }
-        img {
-  border: 2px solid #555;
-        }
-        </style> -->
-</head>
-<body>
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    
+ </head>
+<body> 
     <!--Header-->
-    <header>
+     <header>
         <nav>
             <a href="" >Shopping Cart</a>
             <h2>Shop More</h2>
+            <a href="./Cart.html">
             <i class="bx bx-shopping-bag"></i>
+          </a>
         </nav>
         
-    </header>
+    </header> 
     <!--Shopping Section-->
-    <section>
+     <section>
         <div>
-            <h2 id="shop-product">Shopping products</h2>
+            <h2 id="shop-product">Shopping products</h2> 
             <!--Content-->
         </div>
         <div class="row">
@@ -50,144 +33,66 @@
                 <h3>Backpack</h3>
                 <span>$ 5000</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="5000">Add to Cart</button>
+                
+                <button type="button" onclick="addToCart('Backpack', 'bag.jfif', 5000)">Add</button>
             </div>
             <div class="column">
                 <img src="../Images/pant.jfif" alt="Image Not Found" height="250px" width="250px"/>
                 <h3>Women Cargo pants</h3>
                 <span>$ 1000</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="1000">Add to Cart</button>
+                <button type="button" onclick="addToCart('Women Cargo Pants', 'pant.jfif', 1000)">Add</button>
             </div>
             <div class="column">
                 <img src="../Images/frock.jfif" alt="Image Not Found" height="250px" width="250px"/>
-                <h3>frock for girls</h3>
+                <h3>Frock for girls</h3>
                 <span>$ 1200</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="1200">Add to Cart</button>
+                <button type="button" onclick="addToCart('Frock for girls', 'frock.jfif', 1200)">Add</button>
             </div>
             <div class="column">
                 <img src="../Images/hodiee.jfif" alt="Image Not Found" height="250px" width="250px"/>
                 <h3>Women Hoodies</h3>
                 <span>$ 700</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="700">Add to Cart</button>
+                <button type="button" onclick="addToCart('Women Hodiees', 'hodiee.jfif', 700)">Add</button>
             </div>
             <div class="column">
                 <img src="../Images/kids.jfif" alt="Image Not Found" height="250px" width="250px"/>
-                <h3>VEER Crusier</h3>
+                <h3>Kids Indian Wear</h3>
                 <span>$ 5000</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="5000">Add to Cart</button>
+                <button type="button" onclick="addToCart('Kids Indian Wear', 'kids.jfif', 5000)">Add</button>
             </div>
             <div class="column">
                 <img src="../Images/jacket.jfif" alt="Image Not Found" height="250px" width="250px"/>
-                <h3>Denim jacket for Men</h3>
+                <h3>Jacket for Men</h3>
                 <span>$ 600</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="600">Add to Cart</button>
+                <button type="button" onclick="addToCart('Jacket for men', 'jacket.jfif', 600)">Add</button>
             </div>
             <div class="column">
                 <img src="../Images/kidsboywear.jfif" alt="Image Not Found" height="250px" width="250px"/>
                 <h3>Kids Partywear boys</h3>
                 <span>$ 2000</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="2000">Add to Cart</button>
+                <button type="button" onclick="addToCart('Kids partywear boys', 'kidsboywear.jfif', 2000)">Add</button>
+                
             </div>
             <div class="column">
                 <img src="../Images/shoes.jfif" alt="Image Not Found" height="250px" width="250px"/>
                 <h3>Running Shoes</h3>
                 <span>$ 900</span>
                 <i class="bx bx-shopping-bag"></i>
-                <input type="number" class="quantity-input" value="1">
-                <span class="remove-button">Remove</span>
-                <button class="add-to-cart" data-price="900">Add to Cart</button>
+                <button type="button" onclick="addToCart('Running shoes', 'shoes.jfif', 900)">Add</button>
             </div>
         </div>
     
     </section>
-    <a href="#" class="checkout-button">Checkout</a>
-    <script>
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        const cartItemsContainer = document.createElement('div');
-        const totalPriceContainer = document.createElement('div');
-        const totalPriceHeading = document.createElement('h2');
-        let totalPrice = 0;
-    
-        addToCartButtons.forEach((button) => {
-          button.addEventListener('click', () => {
-            const itemContainer = button.parentElement;
-            const itemName = itemContainer.querySelector('h3').textContent;
-            const itemPrice = parseInt(button.dataset.price);
-    
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item');
-            cartItem.innerHTML = `
-              <h3>${itemName}</h3>
-              <h4>₹ ${itemPrice}</h4>
-            `;
-    
-            cartItemsContainer.appendChild(cartItem);
-    
-            totalPrice += itemPrice;
-            totalPriceHeading.textContent = `Total: ₹ ${totalPrice}`;
-    
-            button.disabled = true;
-            button.textContent = 'Added to Cart';
-          });
-        });
-    
-        document.body.appendChild(cartItemsContainer);
-        document.body.appendChild(totalPriceContainer);
-        totalPriceContainer.appendChild(totalPriceHeading);
-      </script>
-    
-      <script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/Script.js">
         
-        const removeButtons = document.querySelectorAll('.remove-button');
+    </script>
+
+
     
-        removeButtons.forEach((button) => {
-          button.addEventListener('click', () => {
-            const itemContainer = button.parentElement;
-            itemContainer.remove();
-          });
-        });
-    
-     
-        const quantityInputs = document.querySelectorAll('.quantity-input');
-    
-        quantityInputs.forEach((input) => {
-          input.addEventListener('change', () => {
-            const itemContainer = input.parentElement;
-            const itemPriceElement = itemContainer.querySelector('h4');
-            const itemPrice = parseInt(itemPriceElement.textContent.replace('₹ ', ''));
-            const quantity = parseInt(input.value);
-    
-            const totalPriceElement = document.querySelector('.total-price h2');
-            let totalPrice = parseInt(totalPriceElement.textContent.replace('Total: ₹ ', ''));
-    
-            const itemTotalPrice = itemPrice * quantity;
-            totalPrice -= itemPrice * (quantity - 1);
-            totalPrice += itemTotalPrice;
-    
-            itemPriceElement.textContent = `₹ ${itemTotalPrice}`;
-            totalPriceElement.textContent = `Total: ₹ ${totalPrice}`;
-          });
-        });
-      </script>
-</body>
-</html>
